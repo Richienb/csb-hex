@@ -1,13 +1,8 @@
 const test = require("ava")
-const theModule = require(".")
+const csbHex = require(".")
 
 test("main", t => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number"
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	t.is(csbHex([0, 0, 100]), "FFFFFF")
+	t.is(csbHex([0, 0, 0]), "000000")
+	t.is(csbHex([14, 100, 100]), "FFD500")
 })

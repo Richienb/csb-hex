@@ -1,15 +1,20 @@
 /**
-My awesome module.
-@param input Lorem ipsum.
-@param postfix Lorem ipsum.
+Convert a Scratch CSB colour to HEX.
+@param input The CSB to convert.
 @example
 ```
-const theModule = require("the-module");
+const csbHex = require("csb-hex");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+csbHex([0, 0, 100]);
+//=> "#FFFFFF"
+
+csbHex([0, 0, 0]);
+//=> "#000000"
+
+csbHex([14, 100, 100]);
+//=> "#FFD800"
 ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string
+declare function csbHex(input: [number, number, number]): string
 
-export = theModule
+export = csbHex

@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "csb-hex",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Convert a Scratch CSB colour to HEX.",
+	"repository": "https://github.com/Richienb/csb-hex.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,8 +17,16 @@
 		"lint": "xo",
 		"test": "xo && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"scratch",
+		"hex",
+		"csb",
+		"hsv",
+		"colour"
+	],
+	"dependencies": {
+		"color-convert": "^2.0.1"
+	},
 	"devDependencies": {
 		"ava": "^3.10.1",
 		"eslint-config-richienb": "^0.4.2",
